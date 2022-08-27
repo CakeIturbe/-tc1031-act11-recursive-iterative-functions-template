@@ -1,8 +1,8 @@
 // =================================================================
 //
 // File: activity.h
-// Author:
-// Date:
+// Author: Diego Iturbe Bravo - A01708272
+// Date: 25/08/2022
 //
 // =================================================================
 #ifndef ACTIVITY_H
@@ -17,7 +17,13 @@
 // @Complexity	??
 // =================================================================
 unsigned int sumaIterativa(unsigned int n) {
-	return 0;
+	int contador = 0;
+	int suma=0;
+	while (contador<n){
+		contador ++;
+		suma=suma + contador;
+	}
+	return suma;
 }
 
 // =================================================================
@@ -29,7 +35,14 @@ unsigned int sumaIterativa(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaRecursiva(unsigned int n) {
-	return 0;
+	int suma = 0;
+	if (0 == n){
+		return suma;
+	}
+	else {
+		suma = suma + n;
+		return (sumaRecursiva(n-1)+ suma);
+	}
 }
 
 // =================================================================
@@ -41,7 +54,8 @@ unsigned int sumaRecursiva(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaDirecta(unsigned int n) {
-	return 0;
+	int sum=(n*(n+1))/2;
+	return sum;
 }
 
 #endif /* ACTIVITY_H */
